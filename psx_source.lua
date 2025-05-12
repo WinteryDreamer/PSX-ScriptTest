@@ -512,12 +512,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 
 	getgenv().SecureMode = true
 	getgenv().DisableArrayfieldAutoLoad = true
 	
-	local Rayfield = nil
-	if isfile("UI/ArrayField.lua") then
-		Rayfield = loadstring(readfile("UI/ArrayField.lua"))()
-	else
-		Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua'))() --loadstring(game:HttpGet("https://raw.githubusercontent.com/Rafacasari/ArrayField/main/v2.lua"))()
-	end
+	local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua'))()
 	
 	-- local Rayfield = (isfile("UI/ArrayField.lua") and loadstring(readfile("UI/ArrayField.lua"))()) or loadstring(game:HttpGet("https://raw.githubusercontent.com/Rafacasari/ArrayField/main/v2.lua"))()
 	assert(Rayfield, "Oopps! Rayfield has not been loaded. Maybe try re-joining?") 
